@@ -1,6 +1,6 @@
 <launch>
   <arg name="CAMERA_NAME"  default="camera" />
-  <arg name="IMAGE_TYPE"   default="image_rect" />
+  <arg name="IMAGE_TYPE"   default="image_raw" />
   <arg name="ORIGIN_FRAME" default="map" />
   <arg name="ROBOT_FRAME"  default="BODY" />
   <arg name="DEBUG"        default="false" />

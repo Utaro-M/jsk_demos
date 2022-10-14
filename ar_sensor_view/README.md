@@ -39,3 +39,11 @@
 - DEFAULT_roll (default: -1.570796)
 - DEFAULT_pitch (default: 0)
 - DEFAULT_yaw (default: 1.570796)
+
+## Memo
+```
+rosbag play [].bag -l --clock
+roslaunch video_stream_opencv camera.launch video_stream_provider:=[absolute path] visualize:=true loop_videofile:=true
+roslaunch ar_sensor_view sample.launch IMAGE_TYPE:="image_raw" CAMERA_NAME:="camera" ORIGIN_FRAME:="rs_t265_odom"
+rviz -d jaxon_ar_sample.rviz
+```
