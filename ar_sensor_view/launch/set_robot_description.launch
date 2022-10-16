@@ -1,0 +1,4 @@
+<launch>
+  <arg name="model" default="$(find msl_hand_controller)/models/JAXON_RED.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+</launch>

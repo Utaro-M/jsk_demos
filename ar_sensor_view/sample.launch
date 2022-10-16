@@ -15,31 +15,18 @@
 
   <!-- setting depend on the robot -->
   <!-- create TF named click_target_0 .. click_target_n -->
-  <!-- <node name="$(anon target_frame0)" pkg="tf" type="static_transform_publisher" -->
-  <!--       args="0.06 0 0 0 0 0 LLEG_LINK5 click_target_0 100" /> -->
-  <!-- <node name="$(anon target_frame1)" pkg="tf" type="static_transform_publisher" -->
-  <!--       args="0.05 0 -0.15 0 0 0 LARM_LINK5 click_target_1 100" /> -->
-  <!-- <node name="$(anon target_frame2)" pkg="tf" type="static_transform_publisher" -->
-  <!--       args="0.07 0 0 0 0 0 LARM_LINK2 click_target_2 100" /> -->
-  <!-- <node name="$(anon target_frame3)" pkg="tf" type="static_transform_publisher" -->
-  <!--       args="0.07 0 0 0 0 0 RARM_LINK2 click_target_3 100" /> -->
-  <!-- <node name="$(anon target_frame4)" pkg="tf" type="static_transform_publisher" -->
-  <!--       args="0.05 0 -0.15 0 0 0 RARM_LINK5 click_target_4 100" /> -->
-  <!-- <node name="$(anon target_frame5)" pkg="tf" type="static_transform_publisher" -->
-  <!--       args="0.06 0 0 0 0 0 RLEG_LINK5 click_target_5 100" /> -->
-  
   <node name="$(anon target_frame0)" pkg="tf" type="static_transform_publisher"
-        args="-3.728244e-05 0.099929 0.100016 0 0 0 LLEG_LINK5 click_target_0 100" />
+        args="0.06 0 0 0 0 0 LLEG_LINK5 click_target_0 100" />
   <node name="$(anon target_frame1)" pkg="tf" type="static_transform_publisher"
-        args="0.112512 0.323807 1.44133 -1.57 0.26 -2.7 LARM_LINK5 click_target_1 100" />
+        args="0.05 0 -0.15 0 0 0 LARM_LINK5 click_target_1 100" />
   <node name="$(anon target_frame2)" pkg="tf" type="static_transform_publisher"
-        args="-0.121335 0.218436 1.27831 3.079 -1.388 -2.648 LARM_LINK2 click_target_2 100" />
+        args="0.07 0 0 0 0 0 LARM_LINK2 click_target_2 100" />
   <node name="$(anon target_frame3)" pkg="tf" type="static_transform_publisher"
-        args="-0.12112 -0.215491 1.27776 -3.065 -1.387 2.635 RARM_LINK2 click_target_3 100" />
+        args="0.07 0 0 0 0 0 RARM_LINK2 click_target_3 100" />
   <node name="$(anon target_frame4)" pkg="tf" type="static_transform_publisher"
-        args="0.112646 -0.322197 1.44104 1.57 0.247 2.699 RARM_LINK5 click_target_4 100" />
+        args="0.05 0 -0.15 0 0 0 RARM_LINK5 click_target_4 100" />
   <node name="$(anon target_frame5)" pkg="tf" type="static_transform_publisher"
-        args="3.728172e-05 -0.099929 0.099984 0 0 0 RLEG_LINK5 click_target_5 100" />
+        args="0.06 0 0 0 0 0 RLEG_LINK5 click_target_5 100" />
 
   <node name="$(anon origin)" pkg="tf" type="static_transform_publisher"
         args="0 0 -1.1 0 0 0 BODY dummy_map 100" />
