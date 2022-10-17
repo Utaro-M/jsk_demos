@@ -40,10 +40,19 @@
 - DEFAULT_pitch (default: 0)
 - DEFAULT_yaw (default: 1.570796)
 
-## Memo
+## Memo(2022/10/16)
+### required packages
 ```
-rosbag play [].bag -l --clock
-roslaunch video_stream_opencv camera.launch video_stream_provider:=[absolute path] visualize:=true loop_videofile:=true
+git clone -b rotate_image https://github.com/Utaro-M/video_stream_opencv.git
+git clone -b ar_sensor_view_matsuura https://github.com/Utaro-M/jsk_demos.git ## this repository, please use ar_sensor_view_matsuura branch
+```
+
+### commands
+```
+rosparam set /use_sim_time true ##for simulation time
+roslaunch ar_sensor_view set_robot_description.launch ## set jaxonred
+rosbag play [bag file name].bag -l --clock
+roslaunch ar_sensor_view camera.launch video_stream_provider:=/home/utaro/Documents/hand_video/VID20221015175257.mp4 camera_info_url:="file:///$(rospack find ar_sensor_view)/config/camera_info_oppo_reno5.yaml" visualize:=false loop_videofile:=true rotate_90_clockwise:=true width:=1080 height:=1920
 roslaunch ar_sensor_view sample.launch IMAGE_TYPE:="image_raw" CAMERA_NAME:="camera" ORIGIN_FRAME:="rs_t265_odom"
-rviz -d jaxon_ar_sample.rviz
+rosrun rviz rviz -d $(rospack find ar_sensor_view)/jaxon_ar_sample.rviz
 ```

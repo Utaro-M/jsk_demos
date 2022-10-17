@@ -14,14 +14,17 @@
   	<!-- By default, calibrations are stored to file://${ROS_HOME}/camera_info/${NAME}.yaml
   	To use your own fill this arg with the corresponding url, e.g.:
   	"file:///$(find your_camera_package)/config/your_camera.yaml" -->
-    <arg name="camera_info_url" default="file:///$(find ar_sensor_view)/config/camera_info_oppo_reno5.yaml" />
   	<!-- flip the image horizontally (mirror it) -->
   	<arg name="flip_horizontal" default="false" />
   	<!-- flip the image vertically -->
   	<arg name="flip_vertical" default="false" />
+    <!-- rotate the image +90 -->
+    <arg name="rotate_90_clockwise" default="false" />
+    <!-- rotate the image -90 -->
+    <arg name="rotate_90_counterclockwise" default="false" />
     <!-- force width and height, 0 means no forcing -->
-    <arg name="width" default="0"/>
-    <arg name="height" default="0"/>
+    <arg name="width" default="1080"/>
+    <arg name="height" default="1920"/>
     <!-- enable looping playback, only if video_stream_provider is a video file -->
     <arg name="loop_videofile" default="false" />
     <arg name="start_frame" default="0"/>
@@ -44,6 +47,8 @@
 	        <param name="camera_info_url" type="string" value="$(arg camera_info_url)" />
 	        <param name="flip_horizontal" type="bool" value="$(arg flip_horizontal)" />
 	        <param name="flip_vertical" type="bool" value="$(arg flip_vertical)" />
+            <param name="rotate_90_clockwise" type="bool" value="$(arg rotate_90_clockwise)" />
+            <param name="rotate_90_counterclockwise" type="bool" value="$(arg rotate_90_counterclockwise)" />
                 <param name="loop_videofile" type="bool" value="$(arg loop_videofile)" />
                 <param name="start_frame" type="int" value="$(arg start_frame)" />
                 <param name="stop_frame" type="int" value="$(arg stop_frame)" />
